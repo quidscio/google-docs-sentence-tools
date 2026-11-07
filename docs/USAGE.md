@@ -2,6 +2,8 @@
 
 Sentence Tools reformats the text you select in Google Docs. Install it once for your Google account using the [installation guide](INSTALL.md); then use the same side-panel add-on in your other Docs.
 
+The subtitle under **Sentence Tools** shows the build date and time as `Build yyyyMMdd-HHmmss`, for example `Build 20261106-143025`. It uses 24-hour time in `America/New_York` and stays fixed for that build.
+
 ## Choose text and an action
 
 1. Open a Google Doc with the account where the add-on is installed.
@@ -93,4 +95,4 @@ Review prose with unusual abbreviations or deliberate layouts such as verse and 
 
 ## After an update
 
-Refresh Google Docs and reopen Sentence Tools after a code upload. Your existing personal installation stays in place. See [updates and troubleshooting](INSTALL.md#update-the-installed-add-on) if the panel still behaves like an older version.
+Refresh Google Docs and reopen Sentence Tools after a code upload, then check the build stamp under the title to confirm the new build loaded. Your existing personal installation stays in place. See [updates and troubleshooting](INSTALL.md#update-the-installed-add-on) if the panel still behaves like an older version.

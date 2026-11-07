@@ -167,6 +167,7 @@ function createDocument(paragraphs, selected) {
       type, widgets: [], sections: [],
       setText(text) { this.text = text; return this; },
       setTitle(title) { this.title = title; return this; },
+      setSubtitle(subtitle) { this.subtitle = subtitle; return this; },
       setTextButtonStyle(style) { this.style = style; return this; },
       setOnClickAction(action) { this.action = action; return this; },
       setFunctionName(functionName) { this.functionName = functionName; return this; },
@@ -186,6 +187,7 @@ function createDocument(paragraphs, selected) {
   };
   const context = vm.createContext({
     console,
+    SENTENCE_TOOLS_BUILD_TIMESTAMP: '20261106-234512',
     DocumentApp: {
       ElementType: Object.fromEntries(['TEXT', 'PARAGRAPH', 'LIST_ITEM', 'BODY_SECTION', 'HEADER_SECTION', 'FOOTER_SECTION', 'TABLE', 'TABLE_ROW', 'TABLE_CELL', 'INLINE_IMAGE', 'FOOTNOTE_SECTION'].map(type => [type, type])),
       ParagraphHeading: { NORMAL: 'NORMAL', HEADING1: 'HEADING1' },
@@ -399,6 +401,7 @@ test('homepage exposes both commands without reading or editing the document', (
   state.context.DocumentApp.getActiveDocument = () => { throw new Error('Homepage must not read the document'); };
   const card = state.context.onHomepage({});
   assert.equal(card.header.title, 'Sentence Tools');
+  assert.equal(card.header.subtitle, 'Build 20261106-234512');
   const buttons = card.sections.flatMap(section => section.widgets).filter(widget => widget.type === 'button');
   assert.deepEqual(buttons.map(button => button.text), ['Expand', 'Collapse']);
   assert.deepEqual(buttons.map(button => button.action.functionName), ['expandSelection', 'collapseSelection']);

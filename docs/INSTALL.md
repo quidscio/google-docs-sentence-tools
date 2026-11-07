@@ -84,6 +84,8 @@ npm run upload
 
 Upload runs the automated tests and rebuilds the project before pushing to the configured Script ID. The **Test latest code** installation uses that uploaded code. Refresh Docs and reopen the add-on panel to load the update; ordinary code updates do not require reinstalling or copying scripts into documents. Documentation-only changes do not require an upload.
 
+After refreshing, check the subtitle below **Sentence Tools**: `Build yyyyMMdd-HHmmss`, for example `Build 20261106-143025`. This stamp is generated when the code is built, using the manifest's `America/New_York` time zone. It identifies the loaded build, not the time the panel was opened.
+
 If a manifest or permission change does not appear after refreshing, open **Deploy → Test deployments**, uninstall, and install again; complete any new authorization prompt.
 
 Other useful commands:

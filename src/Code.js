@@ -20,7 +20,9 @@ function onHomepage() {
     .addWidget(CardService.newTextParagraph()
       .setText('Join consecutive selected lines and paragraphs. Keep blank lines and bullet boundaries.'));
   return CardService.newCardBuilder()
-    .setHeader(CardService.newCardHeader().setTitle('Sentence Tools'))
+    .setHeader(CardService.newCardHeader()
+      .setTitle('Sentence Tools')
+      .setSubtitle('Build ' + SENTENCE_TOOLS_BUILD_TIMESTAMP))
     .addSection(section)
     .build();
 }
