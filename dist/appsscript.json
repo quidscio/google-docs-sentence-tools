@@ -1,0 +1,22 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/documents.currentonly"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Sentence Tools",
+      "logoUrl": "https://www.gstatic.com/images/icons/material/system/2x/format_line_spacing_black_48dp.png",
+      "layoutProperties": {
+        "primaryColor": "#315DA8"
+      },
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      }
+    },
+    "docs": {}
+  }
+}

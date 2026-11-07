@@ -1,0 +1,24 @@
+{
+  "name": "google-docs-sentence-tools",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal Google Workspace add-on for selected sentence formatting in Google Docs.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build.js",
+    "check": "npm test && npm run build",
+    "setup": "npm run check && node scripts/deploy.js setup",
+    "upload": "npm run check && node scripts/deploy.js upload",
+    "clasp:login": "clasp login",
+    "clasp:logout": "clasp logout",
+    "clasp:account": "clasp show-authorized-user",
+    "clasp:open": "clasp open-script",
+    "clasp:status": "clasp show-file-status"
+  },
+  "devDependencies": {
+    "@google/clasp": "3.4.1"
+  }
+}
